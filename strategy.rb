@@ -13,35 +13,37 @@
 #     end
 # end
 
-class FlyWithWings
-    def fly
-        'I\'m flying.'
+module Behaviour
+    class FlyWithWings
+        def fly
+            'I\'m flying.'
+        end
     end
-end
 
-class FlyNoWay
-    def fly
-        'I\'m unable to fly.'
+    class FlyNoWay
+        def fly
+            'I\'m unable to fly.'
+        end
     end
-end
 
-class Quack
-    def quack
-        'Quack... Quack'
+    class Quack
+        def quack
+            'Quack... Quack'
+        end
     end
-end
 
-class Squeak
-    def quack
-        'Squeak... Squeak'
+    class Squeak
+        def quack
+            'Squeak... Squeak'
+        end
     end
-end
 
-class MuteQuack
-    def quack
-       '***keeping silent***'
-    end
-end 
+    class MuteQuack
+        def quack
+           '***keeping silent***'
+        end
+    end 
+end
 
 class Duck
     attr_accessor :flyable, :quackable
@@ -52,7 +54,8 @@ class Duck
     end
 
     def display
-        puts "I'm an instance of the #{self.class} class.\n#{swim}\n#{performFly}\n#{performQuack}"
+        puts "I'm an instance of the #{self.class} class.\n"\
+             "#{swim}\n#{performFly}\n#{performQuack}"
     end
 
     private
@@ -70,11 +73,18 @@ class Duck
     end
 end 
 
-redHeadDuck = Duck.new(FlyWithWings.new, Quack.new)
-rubberDuck = Duck.new(FlyNoWay.new, Squeak.new)
+#CUSTOMBEHAVE = lambda { |action| "#{action}" }
 
-redHeadDuck.display
-rubberDuck.display
+redHeadDuck = Duck.new(Behaviour::FlyWithWings.new, Behaviour::Quack.new)
+rubberDuck = Duck.new(Behaviour::FlyNoWay.new, Behaviour::Squeak.new)
 
-rubberDuck.quackable = MuteQuack.new
-rubberDuck.display
+redHeadDuck.display # I'm swimming. I'm flying. Quack... Quack
+rubberDuck.display  # I'm swimming. I'm unable to fly. Squeak... Squeak
+
+rubberDuck.quackable = Behaviour::MuteQuack.new
+rubberDuck.display  # I'm swimming. I'm unable to fly. ***keeping silent***
+
+#rocketPowered = CUSTOMBEHAVE.call 'Rocket launch detected...'
+
+#rubberDuck.flyable = rocketPowered
+#rubberDuck.display
