@@ -65,15 +65,13 @@ class Duck
     end
 
     def performFly
-        @flyable.fly
+        @flyable.is_a?(Proc) ? @flyable.call : @flyable.fly
     end
 
     def performQuack
-        @quackable.quack
+        @quackable.is_a?(Proc) ? @quackable.call : @quackable.quack
     end
 end 
-
-#CUSTOMBEHAVE = lambda { |action| "#{action}" }
 
 redHeadDuck = Duck.new(Behaviour::FlyWithWings.new, Behaviour::Quack.new)
 rubberDuck = Duck.new(Behaviour::FlyNoWay.new, Behaviour::Squeak.new)
@@ -84,7 +82,6 @@ rubberDuck.display  # I'm swimming. I'm unable to fly. Squeak... Squeak
 rubberDuck.quackable = Behaviour::MuteQuack.new
 rubberDuck.display  # I'm swimming. I'm unable to fly. ***keeping silent***
 
-#rocketPowered = CUSTOMBEHAVE.call 'Rocket launch detected...'
-
-#rubberDuck.flyable = rocketPowered
-#rubberDuck.display
+rubberDuck.flyable= -> {'Rocket launch detected...'} 
+rubberDuck.quackable= -> {'Cocka-doodle-doo'}
+rubberDuck.display # I'm swimming. Rocket launch detected... Cocka-doodle-doo
