@@ -1,17 +1,20 @@
 # Since Ruby is a dynamically typed language, the interface cunstruction as follows 
 # can be omitted
-#
-# class BehaviourInterface
-#     def action
-#         raise 'Abstract method called'
-#     end
-# end
-#
-# class BehaviourElement < BehaviourInterface
-#     def action
-#       # perform an action
-#     end
-# end
+=begin
+
+ class BehaviourInterface
+     def action
+         raise 'Abstract method called'
+     end
+ end
+
+ class BehaviourElement < BehaviourInterface
+     def action
+       # perform an action
+     end
+ end
+
+=end
 
 module Behaviour
     class FlyWithWings
@@ -54,8 +57,7 @@ class Duck
     end
 
     def display
-        puts "I'm an instance of the #{self.class} class.\n"\
-             "#{swim}\n#{performFly}\n#{performQuack}"
+        puts "#{swim}\n#{performFly}\n#{performQuack}"             
     end
 
     private
