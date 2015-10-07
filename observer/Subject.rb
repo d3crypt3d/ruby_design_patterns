@@ -1,3 +1,5 @@
+# A module with a subject's functionality. Gonna be used as a mixin.
+
 module Observable
     def initialize
         @observers = []

@@ -1,6 +1,6 @@
 require_relative 'observers'
-require_relative 'subject'
-require_relative 'weather'
+require_relative 'Subject'
+require_relative 'Weather'
 
 weatherSubject = WeatherData.new(15, 65, 30.4)
 

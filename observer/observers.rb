@@ -1,3 +1,5 @@
+# 2 kinds of observers, just to simulate different clients activity
+
 class DiffDisplay
     def initialize(temperature, humidity, pressure)
         @temperature, @humidity, @pressure = temperature, humidity, pressure
