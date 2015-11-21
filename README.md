@@ -30,10 +30,17 @@ Bare majority of the original GoF design patterns is covered in this book.
 8. The Hollywood Principle - Don't call us, we'll call you.
 9. A class should have only one reason to change.
 
+---
 ### STRATEGY
 
 **The Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. 
 
+---
 ### OBSERVER
 
 **The Observer Pattern** defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+---
+### DECORATOR
+
+**The Decorator Pattern** attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
