@@ -1,5 +1,5 @@
 # Design Patterns
-Examples from the book **Head First Design Patterns** by *Eric&Elizabeth Freeman* rewrited in Ruby.
+Examples from the book **Head First Design Patterns** by *Eric&Elizabeth Freeman* are rewrited in Ruby.
 
 Bare majority of the original GoF design patterns is covered in this book. 
 
