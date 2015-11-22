@@ -3,8 +3,8 @@
 class Beverage
     attr_reader :description, :cost
 
-    def getDescription(desc='', price=0)
-        "#{self.description}#{desc}" + " $#{self.cost + price}"
+    def fullDescription
+        "#{self.description} $#{self.cost.round(2)}"
     end
 end
 

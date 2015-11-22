@@ -6,8 +6,12 @@
 
 {'Mocha' => 1.10, 'Chocolate' => 0.20, 'Soy' => 0.15, 'Whip' => 0.10}.each do |condiment, cost|
     mod = Module.new do
-        define_method(:getDescription) do |desc='', price=0|
-            super(", #{condiment}#{desc}", cost + price) 
+        define_method(:description) do
+            super() + ", #{condiment}"
+        end
+
+        define_method(:cost) do
+            super() + cost
         end
     end
 
