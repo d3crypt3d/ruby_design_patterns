@@ -1,5 +1,4 @@
-# Classes can be used as namespaces, just as modules can. Classes cannot, however,
-# be used as mixins.
+# Classes can be used as namespaces, just as modules can. Classes cannot be used as mixins, however.
 class Beverage
     attr_reader :description, :getSize 
 

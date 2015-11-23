@@ -35,7 +35,8 @@ p darkroast.fullDescription     # "DarkRoast $0.99"
 p darkroast.getSize             # :tall
 darkroast.setSize(:grande)
 p darkroast.fullDescription     # "DarkRoast $1.49"
-p darkroast.extend(Chocolate)
+darkroast.extend(Chocolate)
 p darkroast.fullDescription     # "DarkRoast, Chocolate $1.79"
 darkroast.setSize(:short)
 p darkroast.fullDescription     # "DarkRoast, Chocolate $0.6"
+p darkroast.setSize(:unknown)   # RuntimeError: should be either of :short, :tall, :grande or :venti
