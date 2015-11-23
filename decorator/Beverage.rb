@@ -1,10 +1,30 @@
 # Classes can be used as namespaces, just as modules can. Classes cannot, however,
 # be used as mixins.
 class Beverage
-    attr_reader :description, :cost
+    attr_reader :description, :getSize 
+
+    def initialize
+        @size_table = {:short => 0.5, :tall => 1, :grande => 1.5, :venti => 2}
+        @getSize = :tall
+    end
+
+    def setSize(size)
+        raise 'should be either of :short, :tall, :grande or :venti' unless 
+            @size_table.has_key?(size)
+        @getSize = size
+    end
 
     def fullDescription
-        "#{self.description} $#{self.cost.round(2)}"
+        "#{self.description} $#{totalPrice}"
+    end
+
+    private
+    def getCost
+        @cost
+    end
+
+    def totalPrice
+        (getCost * @size_table[@getSize]).round(2) 
     end
 end
 
@@ -16,6 +36,7 @@ end
         define_method(:initialize) do
             @description = klass_name
             @cost = cost
+            super()
         end
     end
 

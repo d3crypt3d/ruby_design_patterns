@@ -10,7 +10,7 @@
             super() + ", #{condiment}"
         end
 
-        define_method(:cost) do
+        define_method(:getCost) do
             super() + cost
         end
     end

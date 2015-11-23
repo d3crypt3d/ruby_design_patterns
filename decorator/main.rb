@@ -17,15 +17,25 @@ DarkRoast.singleton_class.ancestors # [#<Class:DarkRoast>, Whip, #<Class:Beverag
 
 # We are going to use the extend method, because we need to decorate objects themselves
 espresso = Espresso.new
-p espresso.fullDescription  # "Espresso $1.99"
+p espresso.fullDescription      # "Espresso $1.99"
 espresso.extend(Mocha)
-p espresso.fullDescription  # "Espresso, Mocha $3.09"
+p espresso.fullDescription      # "Espresso, Mocha $3.09"
 espresso.extend(Soy)
-p espresso.fullDescription  # "Espresso, Mocha, Soy $3.24"
+p espresso.fullDescription      # "Espresso, Mocha, Soy $3.24"
 
 decaf = Decaf.new
-p decaf.fullDescription     # "Decaf $1.05" 
+p decaf.fullDescription         # "Decaf $1.05" 
 decaf.extend(Chocolate)
-p decaf.fullDescription     # "Decaf, Chocolate $1.25" 
+p decaf.fullDescription         # "Decaf, Chocolate $1.25" 
 decaf.extend(Whip)
-p decaf.fullDescription     # "Decaf, Chocolate, Whip $1.35" 
+p decaf.fullDescription         # "Decaf, Chocolate, Whip $1.35" 
+
+darkroast = DarkRoast.new
+p darkroast.fullDescription     # "DarkRoast $0.99"
+p darkroast.getSize             # :tall
+darkroast.setSize(:grande)
+p darkroast.fullDescription     # "DarkRoast $1.49"
+p darkroast.extend(Chocolate)
+p darkroast.fullDescription     # "DarkRoast, Chocolate $1.79"
+darkroast.setSize(:short)
+p darkroast.fullDescription     # "DarkRoast, Chocolate $0.6"
