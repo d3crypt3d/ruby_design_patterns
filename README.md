@@ -1,7 +1,7 @@
 # Design Patterns
 Examples from the book **Head First Design Patterns** by *Eric&Elizabeth Freeman* are rewrited in Ruby.
 
-Bare majority of the original GoF design patterns is covered in this book. 
+Bare majority of the original GoF design patterns are covered in this book. 
 
 ## Table of contents
 1. [Strategy](#strategy)
@@ -44,3 +44,7 @@ Bare majority of the original GoF design patterns is covered in this book.
 ### DECORATOR
 
 **The Decorator Pattern** attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+---
+### FACTORY
+**The Factory Method Pattern** defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
