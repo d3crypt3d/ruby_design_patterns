@@ -4,29 +4,27 @@ require_relative 'Pizza'
 class ChicagoFactory < PizzaFactory
 
     private
-    def create_pizza(type)
-        pizza_name = 'Chicago Style '
-        pizza_dough = self.dough[:thick]
-        pizza_sauce = self.sauce[:plum]
-        toppings = []
+    def create_pizza(**options)
+        options[:name] = 'Chicago Style '
+        options[:dough] = self.dough[:thick]
+        options[:sauce] = self.sauce[:plum]
+        options[:toppings] = []
 
-        case type
-        when :pepperoni
-            pizza_name += 'Pepperoni Pizza'
-            toppings.push 'Sliced pepperoni'    
+        case options[:type]
         when :clam
-            pizza_name += 'Clam Pizza'
-            toppings << self.clams[:frozen]
+            options[:name] += 'Clam Pizza'
+            options[:toppings] << self.clams[:frozen]
         when :veggie
-            pizza_name += 'Veggie Pizza'
-            toppings += self.veggies.values_at(:blackolives,:spinach,:eggplant)
+            options[:name] += 'Veggie Pizza'
+            options[:toppings] += self.veggies.values_at(:blackolives,:spinach,:eggplant)
         when :cheese
-            pizza_name += 'Sauce and Cheese Pizza'
-            toppings << self.cheese[:mozzarella]
+            options[:name]  += 'Sauce and Cheese Pizza'
+            options[:toppings] << self.cheese[:mozzarella]
         end
 
-        super(pizza_name, pizza_dough, pizza_sauce, toppings)
+        super
     end
+
     def cut
         super + " square slices\n"
     end
