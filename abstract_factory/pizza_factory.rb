@@ -12,7 +12,7 @@ class PizzaFactory
 
     private
     def create_pizza(**options)
-
+        # all pepperoni pizzas share name and toppings, though
         case options[:type] 
         when :pepperoni
             options[:name] += 'Pepperoni Pizza'

@@ -1,8 +1,10 @@
 require_relative 'NYFactory'
-require_relative 'NYFactory'
 require_relative 'ChicagoFactory'
 
+# PizzaStore is going to be our abstract factory
+# it produces concrete factories
 class PizzaStore
+    # do we really need instance methods? :)
     def self.factory(type)
         case type
         when :ny then NYFactory.new

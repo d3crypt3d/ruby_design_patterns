@@ -1,8 +1,8 @@
 class Pizza
     attr_reader :name, :dough, :sauce, :toppings
 
+    # all pizzas have a dough, a sauce and toppings
     def initialize(name,dough,sauce,toppings=[])
-        #raise 'toppings must be an array' unless toppings.is_a? Array
         @name, @dough, @sauce, @toppings = name, dough, sauce, toppings
     end
 

@@ -1,3 +1,7 @@
+# rather then creating a bunch of classes
+# we are going to keep all ingridients in 
+# a module
+
 module Ingridients
     def dough
         {
