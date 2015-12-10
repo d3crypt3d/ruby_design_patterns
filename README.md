@@ -50,5 +50,9 @@ Bare majority of the original GoF design patterns are covered in this book.
 **The Factory Method Pattern** defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
 ---
-### THE ABSTRACT FACTORY PATTERN
+### ABSTRACT FACTORY
 **The Abstract Factory Method** provides an interface for creating families of related or dependent objects without specifying their concrete classes. 
+
+---
+### SINGLETON
+**The Singleton Pattern** ensures a class has only one instance, and provides a global point of access to it.
