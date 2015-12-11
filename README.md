@@ -1,14 +1,14 @@
 # Design Patterns
 Examples from the book **Head First Design Patterns** by *Eric&Elizabeth Freeman* are rewrited in Ruby.
 
-Bare majority of the original GoF design patterns are covered in this book. 
+Bare majority of the original GoF design patterns are covered here. 
 
 ## Table of contents
 1. [Strategy](#strategy)
 2. [Observer](#observer)
 3. [Decorator](#decorator)
 4. [Factory](#factory)
-5. [Abstract Factory](#abstract_factory)
+5. [Abstract Factory](#abstract factory)
 6. [Singleton](#singleton)
 7. [Command](#command)
 8. [Adapter](#adapter)
@@ -56,3 +56,7 @@ Bare majority of the original GoF design patterns are covered in this book.
 ---
 ### SINGLETON
 **The Singleton Pattern** ensures a class has only one instance, and provides a global point of access to it.
+
+---
+### COMMAND
+**The Command Pattern** encapsulates a request as an object, thereby letting you parametrize other objects with different requests, queue or log requests, and support undoable operations.
