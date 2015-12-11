@@ -37,11 +37,3 @@ module ChocolateBoiler
     end
 end
 
-puts ChocolateBoiler.is_empty?
-puts ChocolateBoiler.fill   
-puts ChocolateBoiler.is_empty?   
-puts ChocolateBoiler.boil
-puts ChocolateBoiler.is_boiled?
-puts ChocolateBoiler.drain
-puts ChocolateBoiler.is_empty?
-puts ChocolateBoiler.is_boiled?
