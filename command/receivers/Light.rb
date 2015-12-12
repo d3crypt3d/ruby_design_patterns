@@ -1,9 +1,10 @@
-class Light
-  def on
-  'light is on'
+# The chandelier in the living room
+module Light
+  def self.on
+   'light is on'
   end
 
-  def off
+  def self.off
    'light is off'
   end
 end
