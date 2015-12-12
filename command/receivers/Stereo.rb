@@ -11,11 +11,11 @@ class Stereo
     'stereo is off'
   end
 
-  def set_CD
+  def set_cd
     'stereo is set for CD input'
   end
 
-  def set_DVD
+  def set_dvd
     'stereo is set for DVD input'
   end
 

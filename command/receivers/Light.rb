@@ -1,4 +1,4 @@
-# The chandelier in the living room
+# Tending to be a chandelier in the living room :)
 module Light
   def self.on
    'light is on'
