@@ -1,29 +1,27 @@
-class Stereo
-  def initialize
-    @volume = 5
-  end
+module Stereo
+  @volume = 5
 
-  def on
+  def self.on
     'stereo is on'
   end
 
-  def off
+  def self.off
     'stereo is off'
   end
 
-  def set_cd
+  def self.set_cd
     'stereo is set for CD input'
   end
 
-  def set_dvd
+  def self.set_dvd
     'stereo is set for DVD input'
   end
 
-  def set_radio
+  def self.set_radio
     'stereo is set for radio'
   end
 
-  def set_volume(volume)
+  def self.set_volume(volume)
     raise 'must be within 1..11 range' unless (1..11).include? volume
     @volume = volume
     "Stereo volume is set to #{volume}"

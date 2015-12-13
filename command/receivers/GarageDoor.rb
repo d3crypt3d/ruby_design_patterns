@@ -1,21 +1,21 @@
-class GarageDoor
-  def up
+module GarageDoor
+  def self.up
     'garage door is up'
   end
 
-  def down
+  def self.down
     'garage door is down'
   end
 
-  def stop
+  def self.stop
     'garage door is stopped'
   end
 
-  def light_on
+  def self.light_on
     'garage light is on'
   end
 
-  def light_off
+  def self.light_off
     'garage light is off'
   end
 end

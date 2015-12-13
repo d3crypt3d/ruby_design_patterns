@@ -6,9 +6,7 @@ module CeilingFan
 
   LOW, MEDIUM, HIGH = 1, 2, 3
 
-  #def initialize
-  #  @level = 0
-  #end
+  @level = 0
 
   def self.high
     @level = HIGH

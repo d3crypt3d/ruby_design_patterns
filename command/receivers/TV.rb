@@ -1,17 +1,15 @@
-class TV
-  def initialize
-    @channel = 2
-  end
+module TV
+  @channel = 2
 
-  def on
+  def self.on
     'TV is on'
   end
 
-  def off
+  def self.off
     'TV is off'
   end
 
-  def set_input_channel
+  def self.set_input_channel
     @channel = 3
     'Channel is set to VCR'
   end

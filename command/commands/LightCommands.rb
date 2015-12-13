@@ -5,8 +5,8 @@ require_relative '../receivers/Light'
 # an action, lets assing it with a proc.
 class LightOnCommand < Command
   def initialize
-    @command = Light.method(:on)
-    super 'Turns the light on in the living room'
+    super [Light.method(:on)],
+          'Turns the light on in the living room'
   end
 
   def execute
@@ -16,8 +16,8 @@ end
 
 class LightOffCommand < Command
   def initialize
-    @command = Light.method(:off)
-    super 'Turns the light off in the living room'
+    super [Light.method(:off)],
+          'Turns the light off in the living room'
   end
   
   def execute
