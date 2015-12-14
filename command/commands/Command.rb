@@ -1,12 +1,12 @@
 class Command
   attr_reader :description
 
-  def initialize(commands, description)
+  def initialize(*commands, description)
     @commands, @description = commands, description
   end
 
   def execute
-    @commands.inject([]) {|memo, command| memo << command.call}
-    #@commands.map {|command| command.call}
+    # When a single proc is passed and when an array of them is passed
+    @commands.flatten.map {|command| command.call}
   end
 end

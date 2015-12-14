@@ -2,27 +2,15 @@ require_relative 'Command'
 require_relative '../receivers/Hottub'
 
 class HottubOnCommand < Command
-  def initialize(hottub)
-    @hottub = hottub
-    super 'Turns the hottub on, heats and bubbles'
-  end
-
-  def execute
-    @hottub.on
-    @hottub.heat
-    @hottub.bubbles_on
+  def initialize
+    super %w[on heat bubbles_on].map {|sym| Hottub.method(sym)}, 
+          'Turns the hottub on, heats and starts bubbling'
   end
 end
 
 class HottubOffCommand < Command
-  def initialize(hottub)
-    @hottub = hottub
-    super 'Stops bubbling, cools the hottub and turns it off'
-  end
-
-  def execute
-    @hottub.bubbles_off
-    @hottub.coll
-    @hottub.off
+  def initialize
+    super %w[bubbles_off cool off].map {|sym| Hottub.method(sym)},
+          'Stops bubbling, cools the hottub and turns it off'
   end
 end

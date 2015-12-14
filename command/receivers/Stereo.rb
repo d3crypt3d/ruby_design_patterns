@@ -21,9 +21,9 @@ module Stereo
     'stereo is set for radio'
   end
 
-  def self.set_volume(volume)
-    raise 'must be within 1..11 range' unless (1..11).include? volume
-    @volume = volume
-    "Stereo volume is set to #{volume}"
+  def self.set_volume
+    #raise 'must be within 1..11 range' unless (1..11).include? volume
+    @volume = 11
+    "Stereo volume is set to 11"
   end
 end
