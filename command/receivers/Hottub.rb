@@ -4,18 +4,20 @@ module Hottub
 
   def self.on
     @is_turned_on = true
+    'Hottub is turned on'
   end
 
   def self.off
     @is_turned_off = false
+    'Hottub is turned off'
   end
 
   def self.bubbles_on
-    'Hottub is bubbling!' if @is_turned_on
+    'Hottub is bubbling!' 
   end
 
   def self.bubbles_off
-    'Hottub is not bubbling' if @is_turned_off
+    'Hottub is not bubbling' 
   end
 
   def self.jets_on

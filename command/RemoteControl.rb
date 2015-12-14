@@ -4,7 +4,7 @@ Dir["commands/*.rb"].each {|f| require_relative f}
 class RemoteControl
   def initialize
     @on_commands, @off_commands = Array.new(7), Array.new(7) 
-    # Only last action can be undone
+    # Only the last action can be undone
     # We are going to keep the slot number and
     # the button type of the last command (true/false - ON/OFF) 
     @last_action = [0,true]
@@ -33,8 +33,8 @@ class RemoteControl
 
   def command_description(slot)
     if @on_commands[slot] && @off_commands[slot]
-      puts "ON button: #{@on_commands[slot].description}\n",
-           "OFF button: #{@off_commands[slot].description}"
+      ["ON button: #{@on_commands[slot].description}\n",
+           "OFF button: #{@off_commands[slot].description}"]
     end
   end
 
