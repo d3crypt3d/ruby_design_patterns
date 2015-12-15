@@ -1,5 +1,5 @@
 class Observer
   def update(data)
-    puts data,''
+    ["#{self.class} just has been updated:", data, '']
   end
 end
