@@ -5,16 +5,15 @@
 # class methods, those instance methods can be mixed in to other classes. 
 
 {'Mocha' => 1.10, 'Chocolate' => 0.20, 'Soy' => 0.15, 'Whip' => 0.10}.each do |condiment, cost|
-    mod = Module.new do
-        define_method(:description) do
-            super() + ", #{condiment}"
-        end
-
-        define_method(:getCost) do
-            super() + cost
-        end
+  mod = Module.new do
+    define_method(:description) do
+      super() + ", #{condiment}"
     end
 
-    Object.const_set(condiment, mod)
-end
+    define_method(:get_cost) do
+      super() + cost
+    end
+  end
 
+  Object.const_set(condiment, mod)
+end
