@@ -7,10 +7,8 @@ class Pizza
     end
 
     def prepare
-        "Preparing #{@name}\n" +
-        "Tossing dough...\n" +
-        "Adding sauce...\n" +
-        "Adding toppings: #{@toppings.join(', ')}"
+        ["Preparing #{@name}", 'Tossing dough...', 
+         'Adding sauce...', "Adding toppings: #{@toppings.join(', ')}"]
     end
 
     def bake
