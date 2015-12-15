@@ -25,7 +25,7 @@ class Pizza
         'Place pizza in official PizzaStore box'
     end
 
-    def fullDescription
+    def full_description
         "---- #{@name} ----\n" + 
         "#{@dough}\n" + 
         "#{@sauce}\n" +

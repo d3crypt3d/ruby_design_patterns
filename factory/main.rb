@@ -2,7 +2,7 @@ require_relative 'PizzaStore'
 
 pizza_factory = PizzaStore.new
 
-pizza_factory.orderPizza :chicago_clam
+pizza_factory.order_pizza :chicago_clam
 # Preparing Chicago Style Deep Dish Clam Pizza
 # Tossing dough...
 # Adding sauce...
@@ -11,7 +11,7 @@ pizza_factory.orderPizza :chicago_clam
 # Cutting the pizza into square slices
 # Place pizza in official PizzaStore box
 
-pizza_factory.orderPizza :ny_pepperoni
+pizza_factory.order_pizza :ny_pepperoni
 # Preparing NY Style Pepperoni Pizza
 # Tossing dough...
 # Adding sauce...
@@ -20,7 +20,7 @@ pizza_factory.orderPizza :ny_pepperoni
 # Cutting the pizza into diagonal slices
 # Place pizza in official PizzaStore box
 
-pizza_factory.orderPizza :ny_clam
+pizza_factory.order_pizza :ny_clam
 # Preparing NY Style Clam Pizza
 # Tossing dough...
 # Adding sauce...
@@ -29,7 +29,7 @@ pizza_factory.orderPizza :ny_clam
 # Cutting the pizza into diagonal slices
 # Place pizza in official PizzaStore box
 
-pizza_factory.orderPizza :chicago_veggie
+pizza_factory.order_pizza :chicago_veggie
 # Preparing Chicago Style Deep Dish Veggie Pizza
 # Tossing dough...
 # Adding sauce...
