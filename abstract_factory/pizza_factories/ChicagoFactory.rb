@@ -27,6 +27,6 @@ class ChicagoFactory < PizzaFactory
     end
 
     def cut
-        super + " square slices\n"
+        super + ' square slices\n'
     end
 end
