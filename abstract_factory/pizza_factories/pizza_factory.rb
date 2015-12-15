@@ -4,10 +4,9 @@ class PizzaFactory
   include Ingridients
 
   def order_pizza(*args)
-    result = args.inject([]) do |memo, key|
-      [:pepperoni, :clam, :cheese, :veggie].include?(key) ? memo << create_pizza(type: key) : nil
+    args.map do |key|
+      create_pizza(type: key) if [:pepperoni, :clam, :cheese, :veggie].include?(key) 
     end
-    result.length == 1 ? result.first : result
   end
 
   private
