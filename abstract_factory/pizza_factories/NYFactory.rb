@@ -22,7 +22,7 @@ class NYFactory < PizzaFactory
             options[:name] += 'Sauce and Cheese Pizza'
             options[:toppings] << self.cheese[:reggiano]
         end
-        # we are passing the same argument with a data is kept inside
+        # we are passing the same argument with a data inside
         super
     end
 

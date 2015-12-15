@@ -1,5 +1,5 @@
-require_relative 'NYFactory'
-require_relative 'ChicagoFactory'
+require_relative 'pizza_factories/NYFactory'
+require_relative 'pizza_factories/ChicagoFactory'
 
 # PizzaStore is going to be our abstract factory
 # it produces concrete factories

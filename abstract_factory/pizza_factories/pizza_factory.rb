@@ -1,4 +1,4 @@
-require_relative 'ingridients/ingridients'
+require_relative '../ingridients/Ingridients'
 
 class PizzaFactory
     include Ingridients
