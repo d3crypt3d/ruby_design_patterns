@@ -26,10 +26,8 @@ class Pizza
     end
 
     def full_description
-        "---- #{@name} ----\n" + 
-        "#{@dough}\n" + 
-        "#{@sauce}\n" +
-        @toppings.join("\n") 
+        ["---- #{@name} ----", @dough, 
+          @sauce, @toppings.join("\n")] 
     end
 end
 

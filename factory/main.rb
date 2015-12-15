@@ -29,7 +29,7 @@ pizza_factory.order_pizza :ny_clam
 # Cutting the pizza into diagonal slices
 # Place pizza in official PizzaStore box
 
-pizza_factory.order_pizza :chicago_veggie
+pizza = pizza_factory.order_pizza :chicago_veggie
 # Preparing Chicago Style Deep Dish Veggie Pizza
 # Tossing dough...
 # Adding sauce...
@@ -37,4 +37,13 @@ pizza_factory.order_pizza :chicago_veggie
 # Bake for 25 minutes at 350
 # Cutting the pizza into square slices
 # Place pizza in official PizzaStore box
+
+puts pizza.full_description
+# ---- Chicago Style Deep Dish Veggie Pizza ----
+# Extra Thick Crust Dough
+# Plum Tomato Sauce
+# Shredded Mozarella Cheese
+# Black Olives
+# Spinach
+# Eggplant
 
