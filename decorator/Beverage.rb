@@ -1,5 +1,5 @@
 class Beverage
-  # Descriptions method can be decorated with a module's one
+  # Description method can be decorated with a module's one
   attr_reader :description, :size 
 
   def initialize
