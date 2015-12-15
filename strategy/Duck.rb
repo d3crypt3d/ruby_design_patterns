@@ -1,26 +1,27 @@
 class Duck
-    attr_accessor :flyable, :quackable
+  attr_writer :flyable, :quackable
 
-    def initialize(flyable, quackable)
-        @flyable = flyable
-        @quackable = quackable
-    end
+  def initialize(flyable, quackable)
+    @flyable = flyable
+    @quackable = quackable
+  end
 
-    def display
-        puts "#{swim}\n#{performFly}\n#{performQuack}"             
-    end
+  def display
+    puts "#{swim}\n#{perform_fly}\n#{perform_quack}"       
+  end
 
-    private
+  private
 
-    def swim
-        'I\'m swimming.'
-    end
+  # All ducks can swim
+  def swim
+    'I\'m swimming.'
+  end
 
-    def performFly
-        @flyable.is_a?(Proc) ? @flyable.call : @flyable.fly
-    end
+  def perform_fly
+    @flyable.call 
+  end
 
-    def performQuack
-        @quackable.is_a?(Proc) ? @quackable.call : @quackable.quack
-    end
+  def perform_quack
+    @quackable.call
+  end
 end

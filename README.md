@@ -8,7 +8,7 @@ Bare majority of the original GoF design patterns are covered here.
 2. [Observer](#observer)
 3. [Decorator](#decorator)
 4. [Factory](#factory)
-5. [Abstract Factory](#abstract factory)
+5. [Abstract Factory](#abstract-factory)
 6. [Singleton](#singleton)
 7. [Command](#command)
 8. [Adapter](#adapter)
