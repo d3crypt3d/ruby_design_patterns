@@ -7,7 +7,7 @@ class Duck
   end
 
   def display
-    puts "#{swim}\n#{perform_fly}\n#{perform_quack}"       
+    [swim, perform_fly, perform_quack]       
   end
 
   private
