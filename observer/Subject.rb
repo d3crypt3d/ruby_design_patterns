@@ -5,15 +5,15 @@ module Observable
         @observers = []
     end
 
-    def registerObserver(obj)
+    def register_observer(obj)
         @observers << obj
     end
 
-    def removeObserver(obj)
+    def remove_observer(obj)
         @observers.delete(obj)
     end
 
-    def notifyObservers
-        @observers.each { |i| i.update(self) }
+    def notify_observers
+        @observers.each { |observer| observer.update(self) }
     end
 end
