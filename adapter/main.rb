@@ -24,4 +24,18 @@ test_drive.run_test
 # I'm flying a short distance
 # Jump on the raft
 
+# An alternate approach - modify the adaptee class instance at runtime
+turkey = Turkey.new
+class << turkey
+  alias :quack :gobble
+  alias :swim :help_myself
 
+  def fly
+    (0..4).map { 'I\'m flying a short distance' }
+  end
+end
+
+test_drive = Client.new RedHeadDuck.new,
+                        MallardDuck.new,
+                        turkey
+test_drive.run_test
