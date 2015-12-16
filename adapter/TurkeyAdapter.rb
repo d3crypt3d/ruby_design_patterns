@@ -12,4 +12,8 @@ class TurkeyAdapter
   def fly
     (0..4).map { @turkey.fly }
   end
+
+  def swim
+    @turkey.help_myself
+  end
 end

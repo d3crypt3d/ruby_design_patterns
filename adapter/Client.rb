@@ -1,4 +1,4 @@
-require_relative 'poultry/Duck'
+require_relative 'poultry/ducks'
 require_relative 'poultry/Turkey'
 require_relative 'TurkeyAdapter'
 
@@ -12,6 +12,7 @@ class Client
       puts "---Testing the #{duck.class} instance",
            duck.quack,
            duck.fly,
+           duck.swim,
            ''
     end
   end

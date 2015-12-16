@@ -1,6 +1,9 @@
 require_relative 'Client'
 
-test_drive = Client.new(Duck.new,TurkeyAdapter.new(Turkey.new))
+test_drive = Client.new RedHeadDuck.new,
+                        MallardDuck.new,
+                        TurkeyAdapter.new(Turkey.new)
+
 test_drive.run_test
 # ---Testing the Duck instance
 # quack
