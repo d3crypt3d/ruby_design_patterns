@@ -60,3 +60,7 @@ Bare majority of the original GoF design patterns are covered here.
 ---
 ### COMMAND
 **The Command Pattern** encapsulates a request as an object, thereby letting you parametrize other objects with different requests, queue or log requests, and support undoable operations.
+
+---
+### ADAPTER
+**The Adapter Pattern** converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces. 
