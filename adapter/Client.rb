@@ -9,7 +9,7 @@ class Client
 
   def run_test
     @ducks.each do |duck|
-      puts "---Testing the #{duck.class} instance",
+      puts "---Testing the #{duck.class} instance---",
            duck.quack,
            duck.fly,
            duck.swim,
