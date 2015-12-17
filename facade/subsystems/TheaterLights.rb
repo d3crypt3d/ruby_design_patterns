@@ -1,10 +1,6 @@
-class TheaterLights
-  attr_reader :description
+require_relative 'Subsystem'
 
-  def initialize(description)
-    @description = description
-  end
-
+class TheaterLights < Subsystem
   def on
     "#{@description} is on"
   end

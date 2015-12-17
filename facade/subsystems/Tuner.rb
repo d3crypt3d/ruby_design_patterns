@@ -1,6 +1,9 @@
-class Tuner
+require_relative 'Subsystem'
+
+class Tuner < Subsystem
   def initialize(description, amplifier)
-    @description, @amplifier = description, amplifier)
+    @amplifier = amplifier
+    super description
   end
 
   def on

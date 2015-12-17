@@ -1,8 +1,10 @@
-class Amplifier
-  attr_reader :description
+require_relative 'Subsystem'
+
+class Amplifier < Subsystem
 
   def initialize(description,tuner,dvd,cd)
-    @description, @tuner, @dvd, @cd = description, tuner, dvd, cd
+    @tuner, @dvd, @cd = tuner, dvd, cd
+    super description
   end
 
   def on
