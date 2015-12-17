@@ -1,11 +1,6 @@
 require_relative 'Subsystem'
 
-class PopcornPopper
-  def initialize(description, dvd_player)
-    @dvd_player = dvd_player
-    super description
-  end
-
+class PopcornPopper < Subsystem
   def on
     "#{@description} is on"
   end

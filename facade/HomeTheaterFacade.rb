@@ -1,3 +1,5 @@
+Dir["subsystems/*.rb"].each {|f| require_relative f}
+
 class HomeTheaterFacade
   def initialize(amp, tuner, dvd, cd,
                  projector, lights, screen, popper)

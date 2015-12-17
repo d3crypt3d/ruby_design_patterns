@@ -1,12 +1,6 @@
 require_relative 'Subsystem'
 
 class CdPlayer < Subsystem
-  def initialize(description, amplifier, title)
-    @title = title
-    @amplifier = amplifier
-    super description
-  end
-
   def on
     "#{@description} is on"
   end

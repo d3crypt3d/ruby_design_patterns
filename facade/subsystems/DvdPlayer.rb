@@ -1,11 +1,6 @@
 require_relative 'Subsystem'
 
 class DvdPlayer < Subsystem
-  def initialize(description, amplifier, movie)
-    @amplifier, @movie = amplifier, movie
-    super description
-  end
-
   def on
     "#{@description} is on"
   end
