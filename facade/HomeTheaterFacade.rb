@@ -1,8 +1,6 @@
 class HomeTheaterFacade
-  def initialize(amp, tuner, 
-                 dvd, cd,
-                 projector, lights,
-                 screen, popper)
+  def initialize(amp, tuner, dvd, cd,
+                 projector, lights, screen, popper)
     @amp, @tuner, @dvd, @cd = amp, tuner, dvd, cd
     @projector, @lights, @screen, @popper = projector, lights, screen, popper
   end
