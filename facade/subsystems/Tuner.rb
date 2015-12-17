@@ -24,6 +24,6 @@ class Tuner
     "#{@description} setting FM mode"
   end
 
-  privare
+  private
   attr_reader :frequency
 end

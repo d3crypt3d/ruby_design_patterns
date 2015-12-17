@@ -27,13 +27,19 @@ class Amplifier
 
   def set_tuner
     "#{@description} setting tuner to #{@tuner}"
+    subsystem= @tuner
   end
 
   def set_dvd
     "#{@description} setting DVD player to #{@dvd}"
+    subsystem= @dvd
   end
 
   def set_cd
     "#{@description} setting CD player to #{@cd}"
+    subsystem= @cd
   end
+
+  private
+  attr_accessor :subsystem
 end
