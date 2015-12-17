@@ -1,6 +1,6 @@
 require_relative 'Subsystem'
 
-class Projector
+class PopcornPopper
   def initialize(description, dvd_player)
     @dvd_player = dvd_player
     super description
@@ -14,11 +14,7 @@ class Projector
     "#{@description} is off"
   end
 
-  def wide_screen_mode
-    "#{@description} is in widescreen mode (16x9 aspect ratio)"
-  end
-
-  def tv_mode
-    "#{@description} is in tv mode (4x3 aspect ratio)"
+  def pop
+    "#{@description} popping popcorn!"
   end
 end
