@@ -1,8 +1,8 @@
 require_relative 'Subsystem'
 
-class DvdPlayer
-  def initialize(description, track, amplifier)
-    @current_track, @amplifier = track, amplifier
+class DvdPlayer < Subsystem
+  def initialize(description, amplifier, movie)
+    @amplifier, @movie = amplifier, movie
     super description
   end
 
@@ -15,27 +15,24 @@ class DvdPlayer
   end 
 
   def eject
-    @movie = nil
     "#{@description} eject"
   end
 
-  def play(movie)
-    @movie = nil
-    @current_track = 0
-    "#{@description} is playing #{movie}"
-  end
+  #def play(movie)
+  #  @movie = nil
+  #  @current_track = 0
+  #  "#{@description} is playing #{movie}"
+  #end
 
   def play(track)
-    if @movie.nil?
-      "#{@description} can't play track #{track} no dvd inserted"
+    if track
+      "#{@description} is playing track #{track} of \"#{@movie}\""
     else
-      @current_track = track
-      "#{@description} is playing track #{@current_track} of \"#{@movie}\""
+      "#{@description} can't play track #{track} no dvd inserted"
     end
   end
 
   def stop
-    @current_track = 0
     "#{@description} stopped playing \"#{@movie}\""
   end
 
