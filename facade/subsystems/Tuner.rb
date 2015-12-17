@@ -10,8 +10,8 @@ class Tuner < Subsystem
   end
 
   def set_frequency(frequency)
-    "#{@description} setting frequency to #{frequency}"
     @frequency = frequency
+    "#{@description} setting frequency to #{frequency} MHz"
   end
 
   def set_am

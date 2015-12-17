@@ -13,18 +13,9 @@ class DvdPlayer < Subsystem
     "#{@description} eject"
   end
 
-  #def play(movie)
-  #  @movie = nil
-  #  @current_track = 0
-  #  "#{@description} is playing #{movie}"
-  #end
-
-  def play(track)
-    if track
-      "#{@description} is playing track #{track} of \"#{@movie}\""
-    else
-      "#{@description} can't play track #{track} no dvd inserted"
-    end
+  def play(movie)
+    @movie = movie
+    "#{@description} is playing \"#{@movie}\""
   end
 
   def stop

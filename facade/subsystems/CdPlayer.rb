@@ -16,11 +16,7 @@ class CdPlayer < Subsystem
 
   def play(track)
     @current_track = track
-    if track
-      "#{@description} is playing track #{track} of \"#{@urrent_track}\""
-    else
-      "#{@description} can't play track #{track} no cd inserted"
-    end
+    "#{@description} is playing track \"#{track}\""
   end
 
   def stop
