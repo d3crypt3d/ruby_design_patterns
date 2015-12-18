@@ -2,8 +2,9 @@ require_relative 'CaffeineBeverageWithHook'
 require_relative 'TeaWithHook'
 require_relative 'CoffeeWithHook'
 
-puts TeaWithHook.new.prepare_recipe
-puts CoffeeWithHook.new.prepare_recipe
+TeaWithHook.new.prepare_recipe
+CoffeeWithHook.new.prepare_recipe
+# ---Preparing Tea---
 # Boiling water
 # Steeping the tea
 # Pouring into cup
@@ -11,6 +12,7 @@ puts CoffeeWithHook.new.prepare_recipe
 # y
 # Adding lemon
 # 
+# ---Preparing Coffee---
 # Boiling water
 # Dripping Coffee through filter
 # Pouring into cup

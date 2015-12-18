@@ -1,7 +1,10 @@
 class CaffeineBeverageWithHook
   def prepare_recipe
-    puts boil_water, brew, pour_in_cup
+    puts "---Preparing #{self.class.to_s.gsub('WithHook','')}---", 
+         boil_water, brew, pour_in_cup
+
     puts add_condiments if customer_wants_condiments?
+    puts ''
   end
 
   private
