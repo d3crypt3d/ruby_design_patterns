@@ -68,3 +68,7 @@ Bare majority of the original GoF design patterns are covered here.
 ---
 ### FACADE
 **The Facade Pattern** provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+---
+### TEMPLATE
+**The Template Method Pattern** defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorith without changing the algorithm's structure. 
