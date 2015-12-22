@@ -22,6 +22,10 @@ class DinnerMenuIterator
     hash.each_key do |key|
       hash.define_singleton_method(key) { self[key] }
     end
+
+    hash.define_singleton_method(:<=>) do |other_item| 
+      self.price <=> other_item.price
+    end
   end
 
   def array_to_object(arr)
@@ -29,6 +33,10 @@ class DinnerMenuIterator
 
     ['name','description','vegeterian','price'].each_with_index do |v,i|
       obj.define_singleton_method(v) { arr[i] }
+    end
+
+    obj.define_singleton_method(:<=>) do |other_item| 
+      self.price <=> other_item.price
     end
 
     obj

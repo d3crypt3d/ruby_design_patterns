@@ -11,6 +11,14 @@ class Waitress
     @dinner_menu.select {|i| i.vegeterian}.each(&self.method(:print))
   end
 
+  def print_cheapest
+    print @dinner_menu.min
+  end
+
+  def print_most_expensive
+    print @dinner_menu.max
+  end
+
   private
   def print(item)
     puts "name: #{item.name}",

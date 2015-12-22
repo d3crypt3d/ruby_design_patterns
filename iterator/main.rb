@@ -7,7 +7,7 @@ menu_iterator = DinnerMenuIterator.new
 # Our iterator is able to process different kinds of aggregates:
 # objects
 menu_iterator.add_item DinnerMenu.new('Vegetarian BLT', "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99)
-menu_iterator.add_item DinnerMenu.new('BLT', 'Bacon with lettuce & tomato on whole wheat', false, 2.99)
+menu_iterator.add_item DinnerMenu.new('BLT', 'Bacon with lettuce & tomato on whole wheat', false, 2.50)
 menu_iterator.add_item DinnerMenu.new('Steamed Veggies and Brown Rice', 'Steamed vegetables over brown rice', true, 3.99)
 # hashes
 menu_iterator.add_item( {name: 'Soup of the day',
@@ -66,3 +66,14 @@ waitress.print_vegeterian_menu
 # description: Spaghetti with Marinara Sauce, and a slice of sourdough bread
 # vegeterian: true
 # price: $3.89
+waitress.print_most_expensive
+# name: Steamed Veggies and Brown Rice
+# description: Steamed vegetables over brown rice
+# vegeterian: true
+# price: $3.99
+
+waitress.print_cheapest
+# name: BLT
+# description: Bacon with lettuce & tomato on whole wheat
+# vegeterian: false
+# price: $2.5
