@@ -12,34 +12,35 @@ class DinnerMenuIterator
   end
 
   def add_item(item)
-    add_singleton_methods(item) if item.is_a? Hash
-    item = array_to_object(item) if item.is_a? Array
-    @menus << item
+    @menus << process_aggregate(item)
   end
 
   private
-  def add_singleton_methods(hash)
-    hash.each_key do |key|
-      hash.define_singleton_method(key) { self[key] }
-    end
+  def process_aggregate(aggregate)
+    item = case aggregate
+           when Hash
+             aggregate.each_key do |key|
+               aggregate.define_singleton_method(key) { self[key] }
+             end
+           when Array
+             # But turn an array into an Object
+             Object.new.tap do |obj|
+               ['name','description','vegeterian','price'].each_with_index do |v,i|
+                 obj.define_singleton_method(v) { aggregate[i] }
+               end
+             end
+           when DinnerMenu
+             return aggregate
+           else
+             return
+           end
 
-    hash.define_singleton_method(:<=>) do |other_item| 
+    # Meaningful operator will be added for hashes and ex-arrays
+    item.define_singleton_method(:<=>) do |other_item| 
       self.price <=> other_item.price
     end
-  end
 
-  def array_to_object(arr)
-    obj = Object.new
-
-    ['name','description','vegeterian','price'].each_with_index do |v,i|
-      obj.define_singleton_method(v) { arr[i] }
-    end
-
-    obj.define_singleton_method(:<=>) do |other_item| 
-      self.price <=> other_item.price
-    end
-
-    obj
+    item
   end
 end
 

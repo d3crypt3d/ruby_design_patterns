@@ -1,6 +1,7 @@
 require_relative 'DinnerMenuIterator'
 require_relative 'DinnerMenu'
 require_relative 'Waitress'
+require 'byebug'
 
 waitress = Waitress.new
 menu_iterator = DinnerMenuIterator.new
