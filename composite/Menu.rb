@@ -48,7 +48,7 @@ class Menu
   # The recursion will be used, though
   def collect_description
     # The first item in a data structure (that represents the node), is a current object iteslf,
-    # that's memo goes as an array with instance vars
+    # that's why memo goes as an array with instance vars
     @children.sort.inject([[@name,@description]]) do |memo, obj|
       if obj.leaf? 
         # The leaves processing goes without recursion
@@ -74,9 +74,9 @@ class Menu
   # nodes have names and descriptions only, lets order objects
   # by having a :price method 
   def <=>(another_object)
-    return 0 if self.respond_to?(:price) && another_object.respond_to?(:price)
-    return 1 if !self.respond_to?(:price)
-    return -1 if !another_object.respond_to?(:price)
+    return 0 if self.leaf? && another_object.leaf?
+    return 1 if !self.leaf?
+    return -1 if !another_object.leaf?
     self <=> another_object
   end
 end
