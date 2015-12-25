@@ -70,13 +70,11 @@ class Menu
     end
   end
 
-  # Pre-sorting is vitally important for out data structure,
-  # nodes have names and descriptions only, lets order objects
-  # by having a :price method 
+  # Pre-sorting is vitally important for our data structure,
   def <=>(another_object)
     return 0 if self.leaf? && another_object.leaf?
-    return 1 if !self.leaf?
-    return -1 if !another_object.leaf?
+    return 1 unless self.leaf?
+    return -1 unless another_object.leaf?
     self <=> another_object
   end
 end
