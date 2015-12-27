@@ -3,10 +3,10 @@ Dir["pizza/*.rb"].each {|f| require_relative f}
 class PizzaStore
   def order_pizza(pizza)
     pizza_to_do = case(pizza)
-                    when :chicago_clam then ChicagoStyleClamPizza.new
-                    when :ny_pepperoni then NYStylePepperoniPizza.new
-                    when :ny_clam then NYStyleClamPizza.new
-                    when :chicago_veggie then ChicagoStyleVeggiePizza.new
+                    when :chicago_clam then ChicagoStylePizza.clam
+                    when :chicago_veggie then ChicagoStylePizza.veggie
+                    when :ny_pepperoni then NYStylePizza.pepperoni
+                    when :ny_clam then NYStylePizza.clam
                     else nil
                   end
 
