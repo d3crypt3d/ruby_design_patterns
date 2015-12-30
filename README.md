@@ -84,3 +84,7 @@ Bare majority of the original GoF design patterns are covered here.
 ---
 ### STATE
 **The State Pattern** allows an object to alter its behaviour when its internal state changes. The object will appear to change its class.
+
+---
+### PROXY
+**The Proxy Pattern** provides a surrogate or placeholder for another object to control access to it.
