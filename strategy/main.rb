@@ -1,7 +1,7 @@
 require_relative 'Duck'
 require_relative 'Behaviour'
 
-# Since Ruby is a dynamically typed language, the interface cunstruction as follows can be omitted
+# In Ruby following Java-like interface cunstructions can be omitted
 # 
 # class BehaviourInterface
 #   def action
